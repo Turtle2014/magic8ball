@@ -4,6 +4,13 @@ let responses = ["It is the same in every universe, YES!!!", "There was this ran
 
 function askQuestion(){
   let randomIndex = Math.floor(Math.random() * responses.length);
-  var TheChosenOne = responses[randomIndex];
+  let TheChosenOne = responses[randomIndex];
+  
+  let questionAskedID = document.getElementById('Askmequestion');
+  let questionAsked = questionAskedID.value;
+  questionAskedID.value = '';
+  
   document.getElementById("answer").innerHTML = TheChosenOne;
+  document.getElementById("question").innerHTML = questionAsked;
+  
 }
